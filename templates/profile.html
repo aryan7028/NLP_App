@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: wheat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background-color: #fffaf2;
+            width: 420px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #5a3e1b;
+        }
+
+        p {
+            margin-bottom: 25px;
+            color: #6b4c28;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            background-color: #8b6b3e;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #73542d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <h1>Welcome 👋</h1>
+        <p>What would you like to do?</p>
+
+        <ul>
+            <li><a href="/sentiment_analysis">Sentiment Analysis</a></li>
+            <li><a href="/abuse">Abuse Detection</a></li>
+            <li><a href="/spam">Spam Analysis</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

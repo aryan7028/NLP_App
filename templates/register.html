@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registeration Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: wheat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-card {
+            background-color: #fffaf2;
+            width: 440px;
+            padding: 35px 40px;
+            border-radius: 14px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            color: #5a3e1b;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            margin-bottom: 25px;
+            color: #6b4c28;
+            font-weight: 500;
+        }
+
+        .message {
+            color: rgb(255, 144, 127);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #5a3e1b;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #c8b08a;
+            background-color: snow;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #8b6b3e;
+            box-shadow: 0 0 5px rgba(139, 107, 62, 0.4);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 22px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #8b6b3e;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #73542d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #5a3e1b;
+        }
+
+        a {
+            color: #8b6b3e;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-card">
+        <h1>NLP App</h1>
+        <h3>Registeration Page</h3>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form action="/perform_registeration" method="post">
+
+            <label>Name</label>
+            <input type="text" name="user_name" autofocus required placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" name="user_email" required placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" name="user_password" required placeholder="Create password">
+
+            <input type="submit" value="Register">
+
+            <p>Already a Member? <a href="/">Login Here</a></p>
+
+        </form>
+    </div>
+
+</body>
+</html>
